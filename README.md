@@ -27,7 +27,7 @@ Kjør **Restart Kernel and Run All Cells**. Installasjonskommandoer kjøres ikke
 
 - `analyse.ipynb`: forklarte steg for datarensing, beskrivende statistikk, regresjon og klassifikasjon.
 - `Student_Depression_Dataset.csv`: uendret råfil fra [Hopesb/Kaggle](https://www.kaggle.com/datasets/hopesb/student-depression-dataset).
-- `resultater/`: renselogg, koeffisienter, konfidensintervaller, VIF, innflytelseskontroll, følsomhetsanalyse og testresultater.
+- `resultater/`: renselogg, koeffisienter, konfidensintervaller, valideringsresultater, følsomhetsanalyse og testresultater.
 - `figurer/`: oppdaterte figurer fra hovedanalysene og regresjonsdiagnostikk.
 - `rapportforslag.md`: konkret forslag til rapportstruktur og introduksjon, som avventer godkjenning. Overleaf endres ikke av denne koden.
 
@@ -38,19 +38,27 @@ Råfilens SHA256 lagres og kontrolleres ved slutten av kjøringen.
 Begge hovedmodellene gjentas uten nullverdiene, og gjenværende personer beholder sin opprinnelige
 tilhørighet til trening/test. Endrede utvalgsstørrelser rapporteres; variantene brukes ikke til modellutvelgelse.
 
-Den opprinnelige 75/25-delingen og frø 42 beholdes. Standardisering tilpasses bare treningsdata.
-OLS tilpasses treningssettet og sammenlignes med treningsgjennomsnittet på testsettet.
-Den logistiske modellen beholder fem forklaringsvariabler, L2-regularisering med C=1 og terskel 0,5,
-og sammenlignes med vanligste treningsklasse. Vi optimaliserer ikke mot det allerede observerte testsettet.
+Den opprinnelige testdelen på 25 % og frø 42 beholdes. De resterende 75 % deles stratifisert
+i 60 % trening og 15 % validering. To uregulariserte logistiske modeller (tre og fem variabler)
+tilpasses på 60 % og sammenlignes på 15 %. Femvariabelmodellen er den fastlagte hovedmodellen;
+valideringsresultatene brukes ikke til automatisk modellvalg eller terskelendring.
+Deretter tilpasses hovedmodellen på hele 75 %-delen og evalueres på testsettet med terskel 0,5.
+Referansen bruker vanligste klasse i 75 %-delen. Logistisk regresjon bruker statsmodels uten
+regularisering eller standardisering, og oddsratioer vises i opprinnelige måleenheter.
+OLS tilpasses samme 75 %-del og sammenlignes med treningsgjennomsnittet på testsettet.
+Bare k-means standardiserer variablene. Vi optimaliserer ikke mot det allerede observerte testsettet.
 Klyngeanalysen beholdes som et utforskende tillegg og brukes ikke til å velge hovedmodellene.
 
 ## Tolkning og begrensninger
 
-Residualplott, QQ-plott, VIF og Cook-avstand er hjelp til vurdering, ikke automatiske godkjenninger av modellen.
+Residualplott og QQ-plott brukes til å vurdere modellforutsetningene.
 OLS-tabellen bruker klassiske standardfeil; normalitet, konstant feilvarians og uavhengighet må drøftes.
 Skårene for press og stress brukes numerisk, som antar like avstander mellom nabonivåer.
 Verifiser dokumentasjonen for måleenheter, innsamling og selvrapportert depresjon før rapporten ferdigstilles.
 Intern testytelse er ingen ekstern validering eller dokumentasjon på årsak eller klinisk diagnostikk.
+
+Tidligere klassifikasjonstall fra den regulariserte modellen må erstattes med de nye resultatene.
+Bruk samme kodeversjon for alle rapporttabeller og figurer. Overleaf oppdateres ikke i denne endringen.
 
 KI er brukt til forslag, kodeoppdeling, datakontroll og regresjonsdiagnostikk. Gruppen må selv kontrollere og forklare
 analysene og deklarere bruken i rapporten. Se oppgaveteksten for krav til rapport, referanser og KI-deklarasjon.
