@@ -60,8 +60,9 @@ Skårene for press og stress brukes numerisk, som antar like avstander mellom na
 Verifiser dokumentasjonen for måleenheter, innsamling og selvrapportert depresjon før rapporten ferdigstilles.
 Intern testytelse er ingen ekstern validering eller dokumentasjon på årsak eller klinisk diagnostikk.
 
-Tidligere klassifikasjonstall fra den regulariserte modellen må erstattes med de nye resultatene.
-Bruk samme kodeversjon for alle rapporttabeller og figurer. Overleaf oppdateres ikke i denne endringen.
+Rapporttabeller og figurer må hentes fra samme kodeversjon. Den separate rapportkopien i Overleaf
+oppdateres manuelt; notatboken skriver ikke til Overleaf. Introduksjon, diskusjon og konklusjon
+beholdes som gruppens egne tekstområder.
 
 KI er brukt til forslag, kodeoppdeling, datakontroll og regresjonsdiagnostikk. Gruppen må selv kontrollere og forklare
 analysene og deklarere bruken i rapporten. Se oppgaveteksten for krav til rapport, referanser og KI-deklarasjon.
