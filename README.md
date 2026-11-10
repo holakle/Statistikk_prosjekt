@@ -25,7 +25,7 @@ Kjør **Restart Kernel and Run All Cells**. Installasjonskommandoer kjøres ikke
 
 ## Innhold og metodevalg
 
-- `analyse.ipynb`: forklarte steg for datarensing, beskrivende statistikk, regresjon og klassifikasjon.
+- `analyse.ipynb`: en sammenhengende analyse for lesere som møter metodene for første gang. Begreper og vurderingsmål forklares før beregningene, og resultatene tolkes etterpå.
 - `Student_Depression_Dataset.csv`: uendret råfil fra [Hopesb/Kaggle](https://www.kaggle.com/datasets/hopesb/student-depression-dataset).
 - `resultater/`: renselogg, koeffisienter, konfidensintervaller, valideringsresultater, følsomhetsanalyse og testresultater.
 - `figurer/`: oppdaterte figurer fra hovedanalysene og regresjonsdiagnostikk.
