@@ -1,6 +1,10 @@
 # Forslag til minimale endringer i Overleaf
 
-**Status: forslag til godkjenning. Ingen endringer er gjort i Overleaf.**
+**Status: forslag til godkjenning. Denne kodeendringen oppdaterer ikke Overleaf.**
+
+**Viktig:** Klassifikasjonen bruker nå uregularisert logistisk regresjon. Tidligere logistiske
+rapporttall, oddsratioer og forvekslingsmatriser fra den regulariserte modellen må erstattes
+med resultatene fra den nye kjøringen. Bruk én kodeversjon gjennom hele rapporten.
 
 Forslaget gjelder [ISTT1003 Prosjektoppgave](https://www.overleaf.com/project/6ae86172808331c30e9716d0).
 Behold eksisterende bakgrunnsavsnitt, forfattere, hovedseksjoner, poengangivelser og malinnhold.
@@ -50,15 +54,26 @@ Huskelister i malen beholdes til gruppen har fylt inn innholdet.
 
 ## 4. Innhold i de nye regresjonsdelene
 
-**Metode:** formelen med tre forklaringsvariabler, minste kvadraters metode, 75/25-deling,
-koeffisienttolkning og forutsetninger. Beskriv residualplott, QQ-plott, korrelasjoner/VIF,
-Cook-avstand og separat følsomhetsanalyse for nullverdier. Forklar at diagnostikken ikke
-automatisk avgjør hvilke observasjoner som er riktige eller gale.
+**Metode:** formelen med tre forklaringsvariabler, minste kvadraters metode,
+koeffisienttolkning og forutsetninger. Beskriv residualplott, QQ-plott, korrelasjoner og
+en kort følsomhetsanalyse for nullverdier. Ingen observasjoner slettes automatisk fra diagnostikken.
+
+**Dataoppdeling og klassifikasjon:** Behold den opprinnelige testdelen på 25 %. Del resten
+stratifisert i 60 % trening og 15 % validering, med frø 42. Sammenlign uregularisert logistisk
+regresjon med tre og fem variabler på valideringssettet. Femvariabelmodellen forblir hovedmodellen.
+Tilpass den deretter på hele 75 %-delen før testing; OLS bruker samme 75 %-del. Forklar at
+valideringsdelen inngår i den endelige tilpasningen, og at testsettet allerede har vært sett tidligere.
+Bruk terskel 0,5 og opprinnelige måleenheter uten standardisering i klassifikasjonen.
+Standardisering beholdes bare i klyngeanalysen.
 
 **Resultater:** en koeffisienttabell med klassiske 95 % konfidensintervaller og p-verdier,
 treningens R²/justert R², testens RMSE/R² og referansemodellens feil. Velg relevante
 diagnostikkfigurer og forklar observerte avvik. Følsomhetsanalysen rapporteres med endrede
 utvalgsstørrelser; den brukes til robusthetsvurdering, ikke modellutvelgelse.
+
+**Klassifikasjonsresultater:** Vis valideringssammenligningen separat fra testresultatene.
+Rapporter hovedmodellens forvekslingsmatrise, nøyaktighet, sensitivitet og spesifisitet mot
+vanligste treningsklasse, samt oddsratioer. Ikke hev at hovedmodellen ble valgt fra valideringen.
 
 ## 5. Hva dette forslaget ikke endrer
 

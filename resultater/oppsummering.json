@@ -2,10 +2,13 @@
   "raafil_sha256": "c867f72c4dd25a0e1b08ab809cf971baad76984daf0547c4d367f5ad162495e1",
   "n_raa": 27901,
   "n_renset": 27867,
+  "n_trening60": 16720,
+  "n_validering15": 4180,
   "n_trening": 20900,
   "n_test": 6967,
   "fro": 42,
   "testandel": 0.25,
+  "valideringsandel_av_75": 0.2,
   "regresjonsvariabler": [
     "Work/Study Hours",
     "Academic Pressure",
@@ -18,6 +21,7 @@
     "Financial Stress",
     "Age"
   ],
+  "logistisk_modell": "statsmodels.Logit, uregularisert, terskel 0.5",
   "regresjon_R2_trening": 0.0006516324457733758,
   "regresjon_justert_R2_trening": 0.0005081578524223085,
   "regresjon_test": [
@@ -32,14 +36,36 @@
       "RMSE": 1.4683335953506682
     }
   ],
+  "klassifikasjon_validering": [
+    {
+      "modell": "Tre variabler",
+      "noyaktighet": 0.7705741626794258,
+      "sensitivitet": 0.8360588716271463,
+      "spesifisitet": 0.6782006920415224,
+      "TN": 1176,
+      "FP": 558,
+      "FN": 401,
+      "TP": 2045
+    },
+    {
+      "modell": "Fem variabler",
+      "noyaktighet": 0.7767942583732057,
+      "sensitivitet": 0.8274734260016353,
+      "spesifisitet": 0.7053056516724336,
+      "TN": 1223,
+      "FP": 511,
+      "FN": 422,
+      "TP": 2024
+    }
+  ],
   "klassifikasjon_test": [
     {
       "modell": "Logistisk regresjon, fem variabler",
-      "noyaktighet": 0.7838380938711067,
+      "noyaktighet": 0.783981627673317,
       "sensitivitet": 0.8359087564385578,
-      "spesifisitet": 0.7103806228373702,
-      "TN": 2053,
-      "FP": 837,
+      "spesifisitet": 0.7107266435986159,
+      "TN": 2054,
+      "FP": 836,
       "FN": 669,
       "TP": 3408
     },
@@ -85,11 +111,11 @@
       "variant": "Hovedanalyse",
       "n_trening": 20900,
       "n_test": 6967,
-      "noyaktighet": 0.7838380938711067,
+      "noyaktighet": 0.783981627673317,
       "sensitivitet": 0.8359087564385578,
-      "spesifisitet": 0.7103806228373702,
-      "TN": 2053,
-      "FP": 837,
+      "spesifisitet": 0.7107266435986159,
+      "TN": 2054,
+      "FP": 836,
       "FN": 669,
       "TP": 3408
     },
@@ -97,17 +123,15 @@
       "variant": "Uten null i CGPA eller studiepress",
       "n_trening": 20891,
       "n_test": 6964,
-      "noyaktighet": 0.7838885697874785,
-      "sensitivitet": 0.8356231599607459,
+      "noyaktighet": 0.7837449741527858,
+      "sensitivitet": 0.835377821393523,
       "spesifisitet": 0.7108725761772853,
       "TN": 2053,
       "FP": 835,
-      "FN": 670,
-      "TP": 3406
+      "FN": 671,
+      "TP": 3405
     }
   ],
-  "cook_maks": 0.00408640013028631,
-  "vif_maks": 1.0317688649329104,
   "pakkeversjoner": {
     "numpy": "2.2.6",
     "pandas": "2.3.2",
