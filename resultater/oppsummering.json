@@ -1,0 +1,120 @@
+{
+  "raafil_sha256": "c867f72c4dd25a0e1b08ab809cf971baad76984daf0547c4d367f5ad162495e1",
+  "n_raa": 27901,
+  "n_renset": 27867,
+  "n_trening": 20900,
+  "n_test": 6967,
+  "fro": 42,
+  "testandel": 0.25,
+  "regresjonsvariabler": [
+    "Work/Study Hours",
+    "Academic Pressure",
+    "Financial Stress"
+  ],
+  "klassifikasjonsvariabler": [
+    "CGPA",
+    "Work/Study Hours",
+    "Academic Pressure",
+    "Financial Stress",
+    "Age"
+  ],
+  "regresjon_R2_trening": 0.0006516324457733758,
+  "regresjon_justert_R2_trening": 0.0005081578524223085,
+  "regresjon_test": [
+    {
+      "modell": "Lineær regresjon",
+      "R2": 0.0003697422630208891,
+      "RMSE": 1.4680619610207317
+    },
+    {
+      "modell": "Treningsgjennomsnitt",
+      "R2": -2.1353353885089632e-07,
+      "RMSE": 1.4683335953506682
+    }
+  ],
+  "klassifikasjon_test": [
+    {
+      "modell": "Logistisk regresjon, fem variabler",
+      "noyaktighet": 0.7838380938711067,
+      "sensitivitet": 0.8359087564385578,
+      "spesifisitet": 0.7103806228373702,
+      "TN": 2053,
+      "FP": 837,
+      "FN": 669,
+      "TP": 3408
+    },
+    {
+      "modell": "Vanligste treningsklasse",
+      "noyaktighet": 0.5851873116118846,
+      "sensitivitet": 1.0,
+      "spesifisitet": 0.0,
+      "TN": 0,
+      "FP": 2890,
+      "FN": 0,
+      "TP": 4077
+    }
+  ],
+  "regresjon_folsomhet": [
+    {
+      "variant": "Hovedanalyse",
+      "n_trening": 20900,
+      "n_test": 6967,
+      "R2_trening": 0.0006516324457733758,
+      "R2": 0.0003697422630208891,
+      "RMSE": 1.4680619610207317,
+      "const": 7.674315466680669,
+      "Work/Study Hours": 0.0029091757652686527,
+      "Academic Pressure": -0.02512324783953479,
+      "Financial Stress": 0.012676306444865346
+    },
+    {
+      "variant": "Uten null i CGPA eller studiepress",
+      "n_trening": 20891,
+      "n_test": 6964,
+      "R2_trening": 0.0008041254167729939,
+      "R2": 0.0005458975619032636,
+      "RMSE": 1.4622873574747275,
+      "const": 7.681376227293955,
+      "Work/Study Hours": 0.003059875086369636,
+      "Academic Pressure": -0.028014389966880705,
+      "Financial Stress": 0.013827086345736352
+    }
+  ],
+  "klassifikasjon_folsomhet": [
+    {
+      "variant": "Hovedanalyse",
+      "n_trening": 20900,
+      "n_test": 6967,
+      "noyaktighet": 0.7838380938711067,
+      "sensitivitet": 0.8359087564385578,
+      "spesifisitet": 0.7103806228373702,
+      "TN": 2053,
+      "FP": 837,
+      "FN": 669,
+      "TP": 3408
+    },
+    {
+      "variant": "Uten null i CGPA eller studiepress",
+      "n_trening": 20891,
+      "n_test": 6964,
+      "noyaktighet": 0.7838885697874785,
+      "sensitivitet": 0.8356231599607459,
+      "spesifisitet": 0.7108725761772853,
+      "TN": 2053,
+      "FP": 835,
+      "FN": 670,
+      "TP": 3406
+    }
+  ],
+  "cook_maks": 0.00408640013028631,
+  "vif_maks": 1.0317688649329104,
+  "pakkeversjoner": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.2",
+    "matplotlib": "3.10.5",
+    "seaborn": "0.13.2",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.9.1",
+    "statsmodels": "0.15.0"
+  }
+}
