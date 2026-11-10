@@ -34,7 +34,9 @@ Kjør **Restart Kernel and Run All Cells**. Installasjonskommandoer kjøres ikke
 Hovedanalysen avgrenses til `Profession == Student`. Manglende/ugyldige analyseverdier dokumenteres før de utelates.
 Null i CGPA og studiepress beholdes i hovedanalysen og undersøkes separat. Like svar slettes ikke som dubletter;
 bare helt identiske rader behandles som rådatadubletter. Dupliserte/manglende person-ID-er stopper kjøringen for avklaring.
-Råfilens SHA256 lagres og kontrolleres ved slutten av kjøringen.
+`datakontroll.csv` samler manglende, ugyldige og beholdte nullverdier i én tabell.
+Råfilen overskrives ikke. Pakkeversjonene som brukes ved kontrollkjøring, er angitt i `requirements.txt`.
+Resultatene lagres i CSV-tabellene; den tidligere JSON-oppsummeringen med kopier av de samme tallene er fjernet.
 Begge hovedmodellene gjentas uten nullverdiene, og gjenværende personer beholder sin opprinnelige
 tilhørighet til trening/test. Endrede utvalgsstørrelser rapporteres; variantene brukes ikke til modellutvelgelse.
 
@@ -46,6 +48,7 @@ Deretter tilpasses hovedmodellen på hele 75 %-delen og evalueres på testsettet
 Referansen bruker vanligste klasse i 75 %-delen. Logistisk regresjon bruker statsmodels uten
 regularisering eller standardisering, og oddsratioer vises i opprinnelige måleenheter.
 OLS tilpasses samme 75 %-del og sammenlignes med treningsgjennomsnittet på testsettet.
+I notatboken heter denne samlede delen `tilpasning75`, mens `trening60` brukes til valideringssammenligningen.
 Bare k-means standardiserer variablene. Vi optimaliserer ikke mot det allerede observerte testsettet.
 Klyngeanalysen beholdes som et utforskende tillegg og brukes ikke til å velge hovedmodellene.
 
