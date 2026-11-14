@@ -1,3 +1,2 @@
 modell,noyaktighet,sensitivitet,spesifisitet,TN,FP,FN,TP
 "Logistisk regresjon, fem variabler",0.783981627673317,0.8359087564385578,0.7107266435986159,2054,836,669,3408
-Vanligste treningsklasse,0.5851873116118846,1.0,0.0,0,2890,0,4077

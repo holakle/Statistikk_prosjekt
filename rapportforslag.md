@@ -3,7 +3,7 @@
 **Status: forslag til godkjenning. Denne kodeendringen oppdaterer ikke Overleaf.**
 
 **Viktig:** Klassifikasjonen bruker nå uregularisert logistisk regresjon. Tidligere logistiske
-rapporttall, oddsratioer og forvekslingsmatriser fra den regulariserte modellen må erstattes
+rapporttall og forvekslingsmatriser fra den regulariserte modellen må erstattes
 med resultatene fra den nye kjøringen. Bruk én kodeversjon gjennom hele rapporten.
 
 Forslaget gjelder [ISTT1003 Prosjektoppgave](https://www.overleaf.com/project/6ae86172808331c30e9716d0).
@@ -72,11 +72,12 @@ diagnostikkfigurer og forklar observerte avvik. Følsomhetsanalysen rapporteres 
 utvalgsstørrelser; den brukes til robusthetsvurdering, ikke modellutvelgelse.
 
 **Klassifikasjonsresultater:** Vis valideringssammenligningen separat fra testresultatene.
-Rapporter hovedmodellens forvekslingsmatrise, nøyaktighet, sensitivitet og spesifisitet mot
-vanligste treningsklasse, samt oddsratioer. Ikke hev at hovedmodellen ble valgt fra valideringen.
+Rapporter hovedmodellens forvekslingsmatrise, nøyaktighet, sensitivitet og spesifisitet.
+Beskriv valideringen som en sammenligning av variabelsett og femvariabelmodellen som fastlagt på forhånd.
 
 ## 5. Hva dette forslaget ikke endrer
 
-Bakgrunnsavsnittet skrives ikke om. Forfattere, rapportmal, kildeliste og eksisterende
-klyngepunkter beholdes. Det legges ikke inn ferdig resultattekst eller nye hypoteser etter
+Bakgrunnsavsnittet skrives ikke om. Forfattere, rapportmal og kildeliste beholdes.
+Profilfiguren erstatter punktdiagrammet i det utforskende klyngetillegget.
+Det legges ikke inn ferdig resultattekst eller nye hypoteser etter
 at resultatene er kjent. Overleaf endres først etter særskilt godkjenning av forslaget.
