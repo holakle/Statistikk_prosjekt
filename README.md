@@ -45,18 +45,19 @@ i 60 % trening og 15 % validering. To uregulariserte logistiske modeller (tre og
 tilpasses på 60 % og sammenlignes på 15 %. Femvariabelmodellen er den fastlagte hovedmodellen;
 valideringsresultatene brukes ikke til automatisk modellvalg eller terskelendring.
 Deretter tilpasses hovedmodellen på hele 75 %-delen og evalueres på testsettet med terskel 0,5.
-Referansen bruker vanligste klasse i 75 %-delen. Logistisk regresjon bruker statsmodels uten
-regularisering eller standardisering, og oddsratioer vises i opprinnelige måleenheter.
+Logistisk regresjon bruker statsmodels uten regularisering eller standardisering.
+Testresultatene vises med forvekslingsmatrise, nøyaktighet, sensitivitet og spesifisitet.
 OLS tilpasses samme 75 %-del og sammenlignes med treningsgjennomsnittet på testsettet.
 I notatboken heter denne samlede delen `tilpasning75`, mens `trening60` brukes til valideringssammenligningen.
 Bare k-means standardiserer variablene. Vi optimaliserer ikke mot det allerede observerte testsettet.
-Klyngeanalysen beholdes som et utforskende tillegg og brukes ikke til å velge hovedmodellene.
+Klyngeanalysen er et utforskende tillegg. Profilfiguren viser gjennomsnittene i de tre
+klyngene og andelen med selvrapportert depresjon, beregnet etter grupperingen.
 
 ## Tolkning og begrensninger
 
 Residualplott og QQ-plott brukes til å vurdere modellforutsetningene.
 OLS-tabellen bruker klassiske standardfeil; normalitet, konstant feilvarians og uavhengighet må drøftes.
-Skårene for press og stress brukes numerisk, som antar like avstander mellom nabonivåer.
+Studiepress og økonomisk stress er målt på skalaer med rangerte nivåer. Modellene behandler avstanden mellom nabonivåene som lik.
 Verifiser dokumentasjonen for måleenheter, innsamling og selvrapportert depresjon før rapporten ferdigstilles.
 Intern testytelse er ingen ekstern validering eller dokumentasjon på årsak eller klinisk diagnostikk.
 
