@@ -57,7 +57,7 @@ klyngene og andelen med selvrapportert depresjon, beregnet etter grupperingen.
 
 Residualplott og QQ-plott brukes til å vurdere modellforutsetningene.
 OLS-tabellen bruker klassiske standardfeil; normalitet, konstant feilvarians og uavhengighet må drøftes.
-Skårene for press og stress brukes numerisk, som antar like avstander mellom nabonivåer.
+Studiepress og økonomisk stress er målt på skalaer med rangerte nivåer. Modellene behandler avstanden mellom nabonivåene som lik.
 Verifiser dokumentasjonen for måleenheter, innsamling og selvrapportert depresjon før rapporten ferdigstilles.
 Intern testytelse er ingen ekstern validering eller dokumentasjon på årsak eller klinisk diagnostikk.
 
